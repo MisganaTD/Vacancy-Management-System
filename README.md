@@ -1,9 +1,5 @@
 # Vacancy-Management-System
-This is a web-based Vacancy Management System developed using PHP and MySQL. It allows organizations to manage applications received from candidates. Applicants can register and apply for vacancies online.
-
- ## Introduction
-The Vacancy Management System simplifies the process of managing applications. It provides a centralized platform for organizations to reach potential candidates and for applicants to easily find and apply.
-
+This is a web-based Vacancy Management System developed using PHP and MySQL. It allows organizations to manage applications received from candidates. Applicants can register and apply for vacancies online. 
 ## Features
 *   **Applicant Features:**
     *   Online registration. 
