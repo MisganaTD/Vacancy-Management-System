@@ -10,7 +10,7 @@ $result = mysqli_query($con, $sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vacancy System</title>
+    <title>HRSystem - Dilla University</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" >
 <!---    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />--->
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
@@ -102,7 +102,7 @@ if (isset($_POST['submit']))
             move_uploaded_file($_FILES['file1']['tmp_name'],($path . $filename));
             
             // insert file details into database
-          	$con = new mysqli("localhost","root","","duhrm"); 
+          	$con = new mysqli("localhost","root",""," "); 
   //$sql = "insert into tasks(task, date,time) values('$task','$date')";
   $sql = "insert into doc_formatfile(filetitle, filename, created) values('$filetitl','$filename', '$created')";
 mysqli_query ($con, $sql);

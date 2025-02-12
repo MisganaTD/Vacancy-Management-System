@@ -1,6 +1,6 @@
 <?php
 // fetch files
-$con = new mysqli("localhost","root","",""); 
+$con = new mysqli("localhost","root",""," "); 
 //$sql = "select * from candidateregistrationtbl";
 //$result = mysqli_query($con, $sql); 
 $limit=isset($_POST["limitrecord"]) ? $_POST["limitrecord"] : 25;//25; 

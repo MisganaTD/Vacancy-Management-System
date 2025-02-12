@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Company Name | Vacancy System</title>
+    <title>Company Name | Vacancy</title>
 	<script language="javascript" type="text/javascript" src="validateEmp.js" ></script> 
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"/> 
 <script language="javascript">
@@ -107,7 +107,7 @@ function validateEmail(emailField)
 if (isset($_POST['submit']))
 { 
 $phonenumber = $_POST['phonenumber'];
-$con = new mysqli("localhost","root",""," "); 
+$con = new mysqli("localhost","root","","duhrm"); 
 $sql1 = "SELECT * FROM candidateregistrationtbl where phonenumber = '".$phonenumber."'";
 $result = mysqli_query($con,$sql1);
 while($row = mysqli_fetch_array($result))
@@ -136,7 +136,7 @@ else if($emails == 0)
         if (in_array($ext, $allowed))
         {
             // get last record id
-			$con = new mysqli("localhost","root",""," "); 
+			$con = new mysqli("localhost","root","","duhrm"); 
             $sql = 'select max(id) as id from candidateregistrationtbl';
             $result = mysqli_query($con, $sql);
                 $filename = $filename;
@@ -155,7 +155,7 @@ else if($emails == 0)
                 $created = date('Y-m-d H:i:s');
                 move_uploaded_file($_FILES['file1']['tmp_name'],($path . $filename));
 // insert file details into database
-$con = new mysqli("localhost","root",""," ");  
+$con = new mysqli("localhost","root","","duhrm");  
 $sql = "insert into candidateregistrationtbl(fullname,gender,email,phonenumber,jobtitle,position, filename, created,checkboxname) values('$flnm','$gnder', '$email','$phonenumber','$jobtitle','$position','$filename', '$created', '$chkbx')";
 mysqli_query ($con, $sql);
 	mysqli_close ($con); 
